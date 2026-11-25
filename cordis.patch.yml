@@ -1,0 +1,14 @@
+- insert:
+    - id: session-spend
+      name: '@local/session-spend'
+      config:
+        # Display currency: USD (default) or CNY. Both tables are taken from the
+        # official DeepSeek price list, so no exchange rate is applied.
+        currency: USD
+        # Optional overrides, keyed by currency, USD/CNY (or any other 3-letter
+        # code) per 1M tokens. Values are PEAK rates; off-peak requests are
+        # billed at offPeakMultiplier of them.
+        # pricing:
+        #   CNY:
+        #     deepseek-v4-pro: { input: 9, cacheRead: 0.3, cacheWrite: 0, output: 27 }
+        # offPeakMultiplier: 0.5

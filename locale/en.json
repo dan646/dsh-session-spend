@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session spend",
+    "description": "Shows the estimated DeepSeek API spend of the current session under the chat composer in USD or CNY, and stays hidden until the session has used the DeepSeek API."
+  }
+}

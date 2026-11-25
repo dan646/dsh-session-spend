@@ -1,0 +1,44 @@
+{
+  "name": "@local/session-spend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DeepSeek Harness plugin: estimated DeepSeek API spend for the current session under the chat composer, in USD or CNY.",
+  "type": "module",
+  "author": "Daniyar Yergaliyev",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "deepseek",
+    "pricing",
+    "cost"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan646/dsh-session-spend.git"
+  },
+  "homepage": "https://github.com/dan646/dsh-session-spend",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "projection.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
